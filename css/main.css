@@ -32,8 +32,6 @@
 
   .kitten-dawn img{
     width: 100%;
-    transition:opacity 3s linear;
-
   }
 
   .kitten-night, .kitten-sunny {
