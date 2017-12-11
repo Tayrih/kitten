@@ -5,8 +5,22 @@
 }
 
 .container {
-  width: 100%;
-}
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+  }
+
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  [class*='col-'] {
+    float: left;
+    padding: 15px;
+  }
+
 
 @media (min-width: 300px) {
 
@@ -23,15 +37,17 @@
   }
 
   .kitten-dawn {
-    display: inline-block;
+    display: block;
     width: 50%;
-    margin-top: 100px;
     margin-left: 25%;
+    transition: 5s ease-in-out;
 
   }
 
   .kitten-dawn img{
-    width: 100%;
+    width: 50%;
+    bottom: 0px;
+    position: absolute;
   }
 
   .kitten-night, .kitten-sunny {
@@ -56,14 +72,15 @@
   }
 
   .kitten-night {
-    display: inline-block;
+    display: block;
     width: 50%;
-    margin-top: 100px;
     margin-left: 25%;
   }
 
   .kitten-night img {
-    width: 100%;
+    width: 25%;
+    bottom: 0px;
+    position: absolute;
   }
 
   .kitten-dawn, .kitten-sunny {
@@ -77,6 +94,7 @@
     background-image: url('../assets/img/sunny-day.jpg');
     width: 100%;
     background-repeat: no-repeat;
+    background-size: 100% 100%;
     background-size: cover;
   }
   .bg-image-md {
@@ -84,14 +102,15 @@
   }
 
   .kitten-sunny {
-    display: inline-block;
+    display: block;
     width: 50%;
-    margin-top: 100px;
     margin-left: 25%;
   }
 
   .kitten-sunny img {
-    width: 100%;
+    width: 25%;
+    bottom: 0px;
+    position: absolute;
   }
 
   .kitten-dawn, .kitten-night{
